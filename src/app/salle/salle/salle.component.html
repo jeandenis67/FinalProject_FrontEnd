@@ -1,0 +1,227 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h1 class="card-title">Portail des salles</h1>
+
+            </div>
+            <div class="card-body">
+                <div class="container">
+
+                    <form [formGroup]="myForm">
+
+                        <div class="form-group">
+                            <label for="alterEgo">id</label>
+                            <input type="number" [(ngModel)]="salle.id" class="form-control" formControlName="id" />
+                            <div *ngIf="myForm.get('id').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">capacite</label>
+                            <input [(ngModel)]="salle.capacite" class="form-control" formControlName="capacite" />
+                            <div *ngIf="myForm.get('capacite').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">batiment</label>
+                            <input [(ngModel)]="salle.batiment" class="form-control" formControlName="batiment" />
+                            <div *ngIf="myForm.get('batiment').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">etage</label>
+                            <input [(ngModel)]="salle.etage" class="form-control" formControlName="etage" />
+                            <div *ngIf="myForm.get('etage').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">tp</label>
+                            <input [(ngModel)]="salle.tp" class="form-control" formControlName="tp" />
+                            <div *ngIf="myForm.get('tp').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">seances</label>
+                            <input [(ngModel)]="salle.seances" class="form-control" formControlName="seances" />
+                            <div *ngIf="myForm.get('seances').hasError('required')">
+                            </div>
+                        </div>
+
+
+
+                        <button class="btn btn-success" type="button" (click)="ajout()">Ajout</button>
+                 
+
+                    </form>
+
+
+
+
+
+
+                    <form [formGroup]="myForm">
+
+                        <div class="form-group">
+                            <label for="alterEgo">id</label>
+                            <input type="number" [(ngModel)]="salle.id" class="form-control" formControlName="id" />
+                            <div *ngIf="myForm.get('id').hasError('required')">
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-success" type="button" (click)="suppr()">Supprimer</button>
+
+                    </form>
+
+
+
+
+
+
+                    <form [formGroup]="myForm">
+
+                        <div class="form-group">
+                            <label for="alterEgo">id</label>
+                            <input type="number" [(ngModel)]="salle.id" class="form-control" formControlName="id" />
+                            <div *ngIf="myForm.get('id').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">capacite</label>
+                            <input [(ngModel)]="salle.capacite" class="form-control" formControlName="capacite" />
+                            <div *ngIf="myForm.get('capacite').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">batiment</label>
+                            <input [(ngModel)]="salle.batiment" class="form-control" formControlName="batiment" />
+                            <div *ngIf="myForm.get('batiment').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">etage</label>
+                            <input [(ngModel)]="salle.etage" class="form-control" formControlName="etage" />
+                            <div *ngIf="myForm.get('etage').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">tp</label>
+                            <input [(ngModel)]="salle.tp" class="form-control" formControlName="tp" />
+                            <div *ngIf="myForm.get('tp').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">seances</label>
+                            <input [(ngModel)]="salle.seances" class="form-control" formControlName="seances" />
+                            <div *ngIf="myForm.get('seances').hasError('required')">
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success" type="button" (click)="modif()">Modifier</button>                 
+
+                    </form>
+
+
+
+
+                    <form [formGroup]="myForm">
+
+                        <div class="form-group">
+                            <label for="alterEgo">id</label>
+                            <input type="number" [(ngModel)]="salle.id" class="form-control" formControlName="id" />
+                            <div *ngIf="myForm.get('id').hasError('required')">
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success" type="button" (click)="find()">Find</button>
+
+                    </form>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<table class="table">
+    <thead class=" text-primary">
+        <th>
+            id
+        </th>
+        <th>
+            capacite
+        </th>
+        <th>
+            batiment
+        </th>
+        <th>
+            etage
+        </th>
+        <th>
+            tp
+        </th>
+        <th>
+            seances
+        </th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let sal of lstSalles">
+            <td>{{sal.id}}</td>
+            <td>{{sal.capacite}}</td>
+            <td>{{sal.batiment}}</td>
+            <td>{{sal.etage}}</td>
+            <td>{{sal.tp}}</td>
+            <td>{{sal.seances}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<table class="table">
+    <thead class=" text-primary">
+        <th>
+            id
+        </th>
+        <th>
+            capacite
+        </th>
+        <th>
+            batiment
+        </th>
+        <th>
+            etage
+        </th>
+        <th>
+            tp
+        </th>
+        <th>
+            seances
+        </th>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>{{find.id}}</td>
+            <td>{{find.capacite}}</td>
+            <td>{{find.batiment}}</td>
+            <td>{{find.etage}}</td>
+            <td>{{find.tp}}</td>
+            <td>{{find.seances}}</td>
+        </tr>
+    </tbody>
+
+</table>

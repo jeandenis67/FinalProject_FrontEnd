@@ -1,0 +1,271 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h1 class="card-title">Portail des seances</h1>
+
+            </div>
+            <div class="card-body">
+                <div class="container">
+
+                    <form [formGroup]="myForm">
+
+                        <div class="form-group">
+                            <label for="alterEgo">id</label>
+                            <input type="number" [(ngModel)]="seance.id" class="form-control" formControlName="id" />
+                            <div *ngIf="myForm.get('id').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">type</label>
+                            <input [(ngModel)]="seance.type" class="form-control" formControlName="type" />
+                            <div *ngIf="myForm.get('type').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">dateDebut</label>
+                            <input [(ngModel)]="seance.dateDebut" class="form-control" formControlName="dateDebut" />
+                            <div *ngIf="myForm.get('dateDebut').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">dateFin</label>
+                            <input [(ngModel)]="seance.dateFin" class="form-control" formControlName="dateFin" />
+                            <div *ngIf="myForm.get('dateFin').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">duree</label>
+                            <input [(ngModel)]="seance.duree" class="form-control" formControlName="duree" />
+                            <div *ngIf="myForm.get('duree').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">matiere</label>
+                            <input [(ngModel)]="seance.matiere" class="form-control" formControlName="matiere" />
+                            <div *ngIf="myForm.get('matiere').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">enseignants</label>
+                            <input [(ngModel)]="seance.enseignants" class="form-control" formControlName="enseignants" />
+                            <div *ngIf="myForm.get('enseignants').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">salle</label>
+                            <input [(ngModel)]="seance.salle" class="form-control" formControlName="salle" />
+                            <div *ngIf="myForm.get('salle').hasError('required')">
+                            </div>
+                        </div>
+
+                   
+
+                        <button class="btn btn-success" type="button" (click)="ajout()">Ajout</button>
+                 
+
+                    </form>
+
+
+
+
+
+
+                    <form [formGroup]="myForm">
+
+                        <div class="form-group">
+                            <label for="alterEgo">id</label>
+                            <input type="number" [(ngModel)]="seance.id" class="form-control" formControlName="id" />
+                            <div *ngIf="myForm.get('id').hasError('required')">
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-success" type="button" (click)="suppr()">Supprimer</button>
+
+                    </form>
+
+
+
+
+
+
+                    <form [formGroup]="myForm">
+
+                        <div class="form-group">
+                            <label for="alterEgo">id</label>
+                            <input type="number" [(ngModel)]="seance.id" class="form-control" formControlName="id" />
+                            <div *ngIf="myForm.get('id').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">type</label>
+                            <input [(ngModel)]="seance.type" class="form-control" formControlName="type" />
+                            <div *ngIf="myForm.get('type').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">dateDebut</label>
+                            <input [(ngModel)]="seance.dateDebut" class="form-control" formControlName="dateDebut" />
+                            <div *ngIf="myForm.get('dateDebut').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">dateFin</label>
+                            <input [(ngModel)]="seance.dateFin" class="form-control" formControlName="dateFin" />
+                            <div *ngIf="myForm.get('dateFin').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">duree</label>
+                            <input [(ngModel)]="seance.duree" class="form-control" formControlName="duree" />
+                            <div *ngIf="myForm.get('duree').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">matiere</label>
+                            <input [(ngModel)]="seance.matiere" class="form-control" formControlName="matiere" />
+                            <div *ngIf="myForm.get('matiere').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">enseignants</label>
+                            <input [(ngModel)]="seance.enseignants" class="form-control" formControlName="enseignants" />
+                            <div *ngIf="myForm.get('enseignants').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">salle</label>
+                            <input [(ngModel)]="seance.salle" class="form-control" formControlName="salle" />
+                            <div *ngIf="myForm.get('salle').hasError('required')">
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success" type="button" (click)="modif()">Modifier</button>                 
+
+                    </form>
+
+
+
+
+                    <form [formGroup]="myForm">
+
+                        <div class="form-group">
+                            <label for="alterEgo">id</label>
+                            <input type="number" [(ngModel)]="seance.id" class="form-control" formControlName="id" />
+                            <div *ngIf="myForm.get('id').hasError('required')">
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success" type="button" (click)="find()">Find</button>
+
+                    </form>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<table class="table">
+    <thead class=" text-primary">
+        <th>
+            id
+        </th>
+        <th>
+            type
+        </th>
+        <th>
+            dateDebut
+        </th>
+        <th>
+            dateFin
+        </th>
+        <th>
+            duree
+        </th>
+        <th>
+            matiere
+        </th>
+        <th>
+            enseignants
+        </th>
+        <th>
+            salle
+        </th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let sea of lstSeances">
+            <td>{{sea.id}}</td>
+            <td>{{sea.type}}</td>
+            <td>{{sea.dateDebut}}</td>
+            <td>{{sea.dateFin}}</td>
+            <td>{{sea.duree}}</td>
+            <td>{{sea.matiere}}</td>
+            <td>{{sea.enseignants}}</td>
+            <td>{{sea.salle}}</td>   
+        </tr>
+    </tbody>
+</table>
+
+
+<table class="table">
+    <thead class=" text-primary">
+        <th>
+            id
+        </th>
+        <th>
+            type
+        </th>
+        <th>
+            dateDebut
+        </th>
+        <th>
+            dateFin
+        </th>
+        <th>
+            duree
+        </th>
+        <th>
+            matiere
+        </th>
+        <th>
+            enseignants
+        </th>
+        <th>
+            salle
+        </th>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>{{find.id}}</td>
+            <td>{{find.type}}</td>
+            <td>{{find.dateDebut}}</td>
+            <td>{{find.dateFin}}</td>
+            <td>{{find.duree}}</td>
+            <td>{{find.matiere}}</td>
+            <td>{{find.enseignants}}</td>
+            <td>{{find.salle}}</td> 
+        </tr>
+    </tbody>
+
+</table>

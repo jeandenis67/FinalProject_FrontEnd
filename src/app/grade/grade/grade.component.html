@@ -1,0 +1,199 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h1 class="card-title">Portail des grades</h1>
+
+            </div>
+            <div class="card-body">
+                <div class="container">
+
+                    <form [formGroup]="myForm">
+
+                        <div class="form-group">
+                            <label for="alterEgo">id</label>
+                            <input type="number" [(ngModel)]="grade.id" class="form-control" formControlName="id" />
+                            <div *ngIf="myForm.get('id').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">nom</label>
+                            <input [(ngModel)]="grade.nom" class="form-control" formControlName="nom" />
+                            <div *ngIf="myForm.get('nom').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">quotaSeance</label>
+                            <input [(ngModel)]="grade.quotaSeance" class="form-control" formControlName="quotaSeance" />
+                            <div *ngIf="myForm.get('quotaSeance').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">enseignants</label>
+                            <input [(ngModel)]="grade.enseignants" class="form-control" formControlName="enseignants" />
+                            <div *ngIf="myForm.get('enseignants').hasError('required')">
+                            </div>
+                        </div>
+
+
+
+                        <button class="btn btn-success" type="button" (click)="ajout()">Ajout</button>
+                 
+
+                    </form>
+
+
+
+
+
+
+                    <form [formGroup]="myForm">
+
+                        <div class="form-group">
+                            <label for="alterEgo">id</label>
+                            <input type="number" [(ngModel)]="grade.id" class="form-control" formControlName="id" />
+                            <div *ngIf="myForm.get('id').hasError('required')">
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-success" type="button" (click)="suppr()">Supprimer</button>
+
+                    </form>
+
+
+
+
+
+
+                    <form [formGroup]="myForm">
+
+                        <div class="form-group">
+                            <label for="alterEgo">id</label>
+                            <input type="number" [(ngModel)]="grade.id" class="form-control" formControlName="id" />
+                            <div *ngIf="myForm.get('id').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">nom</label>
+                            <input [(ngModel)]="grade.nom" class="form-control" formControlName="nom" />
+                            <div *ngIf="myForm.get('nom').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">quotaSeance</label>
+                            <input [(ngModel)]="grade.quotaSeance" class="form-control" formControlName="quotaSeance" />
+                            <div *ngIf="myForm.get('quotaSeance').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">enseignants</label>
+                            <input [(ngModel)]="grade.enseignants" class="form-control" formControlName="enseignants" />
+                            <div *ngIf="myForm.get('enseignants').hasError('required')">
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success" type="button" (click)="modif()">Modifier</button>                 
+
+                    </form>
+
+
+
+
+                    <form [formGroup]="myForm">
+
+                        <div class="form-group">
+                            <label for="alterEgo">id</label>
+                            <input type="number" [(ngModel)]="grade.id" class="form-control" formControlName="id" />
+                            <div *ngIf="myForm.get('id').hasError('required')">
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success" type="button" (click)="find()">Find</button>
+
+                    </form>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<table class="table">
+    <thead class=" text-primary">
+        <th>
+            id
+        </th>
+        <th>
+            nom
+        </th>
+        <th>
+            quotaSeacne
+        </th>
+        <th>
+            enseignants
+        </th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let gra of lstGrades">
+            <td>{{gra.id}}</td>
+            <td>{{gra.nom}}</td>
+            <td>{{gra.prenom}}</td>
+            <td>{{gra.grade}}</td>
+            <td>{{gra.matiere}}</td>
+            <td>{{gra.adresse}}</td>
+            <td>{{gra.numTel}}</td>
+            <td>{{gra.mail}}</td>
+            <td>{{gra.seances}}</td>
+            <td>{{gra.username}}</td>
+            <td>{{gra.password}}</td>
+            <td>{{gra.role}}</td>    
+        </tr>
+    </tbody>
+</table>
+
+
+<table class="table">
+    <thead class=" text-primary">
+        <th>
+            id
+        </th>
+        <th>
+            nom
+        </th>
+        <th>
+            quotaSeacne
+        </th>
+        <th>
+            enseignants
+        </th>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>{{find.id}}</td>
+            <td>{{find.nom}}</td>
+            <td>{{find.prenom}}</td>
+            <td>{{find.grade}}</td>
+            <td>{{find.matiere}}</td>
+            <td>{{find.adresse}}</td>
+            <td>{{find.numTel}}</td>
+            <td>{{find.mail}}</td>
+            <td>{{find.seances}}</td>
+            <td>{{find.username}}</td>
+            <td>{{find.password}}</td>
+            <td>{{find.role}}</td>  
+        </tr>
+    </tbody>
+
+</table>

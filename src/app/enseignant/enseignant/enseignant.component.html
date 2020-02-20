@@ -1,0 +1,359 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h1 class="card-title">Portail des admins</h1>
+
+            </div>
+            <div class="card-body">
+                <div class="container">
+
+                    <form [formGroup]="myForm">
+
+                        <div class="form-group">
+                            <label for="alterEgo">id</label>
+                            <input type="number" [(ngModel)]="enseignant.id" class="form-control" formControlName="id" />
+                            <div *ngIf="myForm.get('id').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">nom</label>
+                            <input [(ngModel)]="enseignant.nom" class="form-control" formControlName="nom" />
+                            <div *ngIf="myForm.get('nom').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">prenom</label>
+                            <input [(ngModel)]="enseignant.prenom" class="form-control" formControlName="prenom" />
+                            <div *ngIf="myForm.get('prenom').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">grade</label>
+                            <input [(ngModel)]="enseignant.grade" class="form-control" formControlName="grade" />
+                            <div *ngIf="myForm.get('grade').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">matiere</label>
+                            <input [(ngModel)]="enseignant.matiere" class="form-control" formControlName="matiere" />
+                            <div *ngIf="myForm.get('matiere').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">adresse</label>
+                            <input [(ngModel)]="enseignant.adresse" class="form-control" formControlName="adresse" />
+                            <div *ngIf="myForm.get('adresse').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">numTel</label>
+                            <input [(ngModel)]="enseignant.numTel" class="form-control" formControlName="numTel" />
+                            <div *ngIf="myForm.get('numTel').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">mail</label>
+                            <input [(ngModel)]="enseignant.mail" class="form-control" formControlName="mail" />
+                            <div *ngIf="myForm.get('mail').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">seances</label>
+                            <input [(ngModel)]="enseignant.seances" class="form-control" formControlName="seances" />
+                            <div *ngIf="myForm.get('seances').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">username</label>
+                            <input [(ngModel)]="enseignant.username" class="form-control" formControlName="username" />
+                            <div *ngIf="myForm.get('username').hasError('required')">
+                            </div>
+                        </div>
+                       
+                        <div class="form-group">
+                            <label for="alterEgo">password</label>
+                            <input [(ngModel)]="enseignant.password" class="form-control" formControlName="password" />
+                            <div *ngIf="myForm.get('password').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">role</label>
+                            <input [(ngModel)]="enseignant.role" class="form-control" formControlName="role" />
+                            <div *ngIf="myForm.get('role').hasError('required')">
+                            </div>
+                        </div>
+
+
+
+                        <button class="btn btn-success" type="button" (click)="ajout()">Ajout</button>
+                 
+
+                    </form>
+
+
+
+
+
+
+                    <form [formGroup]="myForm">
+
+                        <div class="form-group">
+                            <label for="alterEgo">id</label>
+                            <input type="number" [(ngModel)]="enseignant.id" class="form-control" formControlName="id" />
+                            <div *ngIf="myForm.get('id').hasError('required')">
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-success" type="button" (click)="suppr()">Supprimer</button>
+
+                    </form>
+
+
+
+
+
+
+                    <form [formGroup]="myForm">
+
+                        <div class="form-group">
+                            <label for="alterEgo">id</label>
+                            <input type="number" [(ngModel)]="enseignant.id" class="form-control" formControlName="id" />
+                            <div *ngIf="myForm.get('id').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">nom</label>
+                            <input [(ngModel)]="enseignant.nom" class="form-control" formControlName="nom" />
+                            <div *ngIf="myForm.get('nom').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">prenom</label>
+                            <input [(ngModel)]="enseignant.prenom" class="form-control" formControlName="prenom" />
+                            <div *ngIf="myForm.get('prenom').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">grade</label>
+                            <input [(ngModel)]="enseignant.grade" class="form-control" formControlName="grade" />
+                            <div *ngIf="myForm.get('grade').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">matiere</label>
+                            <input [(ngModel)]="enseignant.matiere" class="form-control" formControlName="matiere" />
+                            <div *ngIf="myForm.get('matiere').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">adresse</label>
+                            <input [(ngModel)]="enseignant.adresse" class="form-control" formControlName="adresse" />
+                            <div *ngIf="myForm.get('adresse').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">numTel</label>
+                            <input [(ngModel)]="enseignant.numTel" class="form-control" formControlName="numTel" />
+                            <div *ngIf="myForm.get('numTel').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">mail</label>
+                            <input [(ngModel)]="enseignant.mail" class="form-control" formControlName="mail" />
+                            <div *ngIf="myForm.get('mail').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">seances</label>
+                            <input [(ngModel)]="enseignant.seances" class="form-control" formControlName="seances" />
+                            <div *ngIf="myForm.get('seances').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">username</label>
+                            <input [(ngModel)]="enseignant.username" class="form-control" formControlName="username" />
+                            <div *ngIf="myForm.get('username').hasError('required')">
+                            </div>
+                        </div>
+                       
+                        <div class="form-group">
+                            <label for="alterEgo">password</label>
+                            <input [(ngModel)]="enseignant.password" class="form-control" formControlName="password" />
+                            <div *ngIf="myForm.get('password').hasError('required')">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alterEgo">role</label>
+                            <input [(ngModel)]="enseignant.role" class="form-control" formControlName="role" />
+                            <div *ngIf="myForm.get('role').hasError('required')">
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success" type="button" (click)="modif()">Modifier</button>                 
+
+                    </form>
+
+
+
+
+                    <form [formGroup]="myForm">
+
+                        <div class="form-group">
+                            <label for="alterEgo">id</label>
+                            <input type="number" [(ngModel)]="enseignant.id" class="form-control" formControlName="id" />
+                            <div *ngIf="myForm.get('id').hasError('required')">
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success" type="button" (click)="find()">Find</button>
+
+                    </form>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<table class="table">
+    <thead class=" text-primary">
+        <th>
+            id
+        </th>
+        <th>
+            nom
+        </th>
+        <th>
+            prenom
+        </th>
+        <th>
+            grade
+        </th>
+        <th>
+            matiere
+        </th>
+        <th>
+            adresse
+        </th>
+        <th>
+            numTel
+        </th>
+        <th>
+            mail
+        </th>
+        <th>
+            seances
+        </th>
+        <th>
+            username
+        </th>
+        <th>
+            password
+        </th>
+        <th>
+            role
+        </th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let ens of lstEnseignants">
+            <td>{{ens.id}}</td>
+            <td>{{ens.nom}}</td>
+            <td>{{ens.prenom}}</td>
+            <td>{{ens.grade}}</td>
+            <td>{{ens.matiere}}</td>
+            <td>{{ens.adresse}}</td>
+            <td>{{ens.numTel}}</td>
+            <td>{{ens.mail}}</td>
+            <td>{{ens.seances}}</td>
+            <td>{{ens.username}}</td>
+            <td>{{ens.password}}</td>
+            <td>{{ens.role}}</td>    
+        </tr>
+    </tbody>
+</table>
+
+
+<table class="table">
+    <thead class=" text-primary">
+        <th>
+            id
+        </th>
+        <th>
+            nom
+        </th>
+        <th>
+            prenom
+        </th>
+        <th>
+            grade
+        </th>
+        <th>
+            matiere
+        </th>
+        <th>
+            adresse
+        </th>
+        <th>
+            numTel
+        </th>
+        <th>
+            mail
+        </th>
+        <th>
+            seances
+        </th>
+        <th>
+            username
+        </th>
+        <th>
+            password
+        </th>
+        <th>
+            role
+        </th>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>{{find.id}}</td>
+            <td>{{find.nom}}</td>
+            <td>{{find.prenom}}</td>
+            <td>{{find.grade}}</td>
+            <td>{{find.matiere}}</td>
+            <td>{{find.adresse}}</td>
+            <td>{{find.numTel}}</td>
+            <td>{{find.mail}}</td>
+            <td>{{find.seances}}</td>
+            <td>{{find.username}}</td>
+            <td>{{find.password}}</td>
+            <td>{{find.role}}</td>    
+        </tr>
+    </tbody>
+
+</table>
